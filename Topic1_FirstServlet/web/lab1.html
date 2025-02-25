@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div>
+            <h1>Score Entry Form</h1>
+            <form method="post" action="lab1">
+                <label>Họ và tên (*)</label>
+                <input type="text" name="txtFullname"/><br/>
+                <label>Giới tính</label>
+                <input type="radio" name="rbGender" value="male" checked/> Nam
+                <input type="radio" name="rbGender" value="female"/> Nữ<br/>
+                <label>Điểm (*)</label>
+                <input type="text" name="txtScore"/><br/>
+                <label>Môn học</label>
+                <select name="ddlCourse">
+                    <option value="PRO192">PRO192</option>
+                    <option value="DBI202">DBI202</option>
+                    <option value="PRJ301">PRJ301</option>
+                </select><br/>
+                <label></label>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet>
+        <servlet-name>Calculate</servlet-name>
+        <servlet-class>Calculate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RectangleServlet</servlet-name>
+        <servlet-class>RectangleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RectangleServlet1</servlet-name>
+        <servlet-class>RectangleServlet1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalculatorServlet</servlet-name>
+        <servlet-class>CalculatorServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Lab1Servlet</servlet-name>
+        <servlet-class>Lab1Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Calculate</servlet-name>
+        <url-pattern>/calculate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RectangleServlet</servlet-name>
+        <url-pattern>/rectangle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RectangleServlet1</servlet-name>
+        <url-pattern>/rectangle1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalculatorServlet</servlet-name>
+        <url-pattern>/calculator</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Lab1Servlet</servlet-name>
+        <url-pattern>/lab1</url-pattern>
+    </servlet-mapping>
+</web-app>
