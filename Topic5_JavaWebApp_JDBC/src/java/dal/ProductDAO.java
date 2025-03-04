@@ -41,4 +41,40 @@ public class ProductDAO extends DBContext {
         }
         return products;
     }
+    
+    // R: Get a single Product by Id
+    public Product getProduct(int id){
+        Product product = null;
+        try {
+            String sql = "select * from Products where Id="+id;
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){ // Kiểm tra xem có tồn tại dữ liệu từ ResultSet không
+                int pId = rs.getInt("Id");
+                String name = rs.getString("Name");
+                int price = rs.getInt("Price");
+                int quantity = rs.getInt("Quantity");
+                int catId = rs.getInt("CategoryId");
+                product = new Product(pId, name, price, quantity, catId);
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        return product;
+    }
+    
+    // D: Delete product by Id
+    public boolean deleteProduct(int id){
+        try {
+            String sql = "delete from Products where Id=?";
+            PreparedStatement st = connection.prepareStatement(sql);
+            st.setInt(1, id);
+            int count = st.executeUpdate();
+            if(count>0)
+                return true;
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        return false;
+    }
 }

@@ -8,6 +8,10 @@
     </head>
     <body>
         <h1>List of Products</h1>
+        <div>
+            <a href="products?action=create">Create a new Product</a>
+        </div>
+        <div>${delMessage}</div>
         <table border="1">
             <thead>
                 <tr>
@@ -16,6 +20,7 @@
                     <th>Price</th>
                     <th>Quantity</th>
                     <th>Category</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,6 +31,14 @@
                         <td>${p.price}</td>
                         <td>${p.quantity}</td>
                         <td>${p.cName}</td>
+                        <td>
+                            <a href="products?action=edit&id=${p.id}">
+                                <img src="assets/images/edit.jfif" width="32px"/>
+                            </a>
+                            <a href="products?action=delete&id=${p.id}">
+                                <img src="assets/images/del.jfif" width="32px"/>
+                            </a>
+                        </td>
                     </tr>
                 </c:forEach>
             </tbody>
