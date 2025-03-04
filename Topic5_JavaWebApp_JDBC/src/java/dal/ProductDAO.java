@@ -77,4 +77,19 @@ public class ProductDAO extends DBContext {
         }
         return false;
     }
+    
+    // D: Edit product by Id
+//    public boolean editProduct(Product product){
+//        try {
+//            String sql = "delete from Products where Id=?";
+//            PreparedStatement st = connection.prepareStatement(sql);
+//            st.setInt(1, id);
+//            int count = st.executeUpdate();
+//            if(count>0)
+//                return true;
+//        } catch (Exception e) {
+//            System.out.println("Error: " + e.getMessage());
+//        }
+//        return false;
+//    }
 }

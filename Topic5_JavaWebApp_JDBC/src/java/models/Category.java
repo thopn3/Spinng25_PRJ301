@@ -1,37 +1,39 @@
 package models;
 
 public class Category {
-    private int Id;
-    private String Name;
-    private String Description;
+    private int id;
+    private String name;
+    private String description;
 
-    public Category(int Id, String Name, String Description) {
-        this.Id = Id;
-        this.Name = Name;
-        this.Description = Description;
+    public Category(int id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
-    public void setDescription(String Description) {
-        this.Description = Description;
+    public void setDescription(String description) {
+        this.description = description;
     }
+
+    
 }
